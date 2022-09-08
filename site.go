@@ -11,7 +11,7 @@ import (
 type Page interface {
 	Build() (io.Reader, error)
 	Handle(http.ResponseWriter, *http.Request)
-	Watch() func()
+	Watch()
 }
 
 type SiteData struct {
